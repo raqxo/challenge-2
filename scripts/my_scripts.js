@@ -1,18 +1,12 @@
-$(document).ready(function(){
+const deg = 6;
 
-	kruip();
+setInterval(() => {
+	let day = new Date();
+	let hh = day.getHours() * 30;
+	let mm = day.getMinutes() * deg;
+	let ss = day.getSeconds() * deg;
 
-});
-
-function kruip(){
-	$("#gerrit").animate({
-				  	left: "+=10px",
-				  	width: "210px"
-			  	}, 600)
-				.animate({
-					left: "+=10px",
-				  	width: "200px"
-			  	}, 600);
-
-	setTimeout("kruip()", 1200);
-}
+	hr.style.transform = `rotateZ(${hh+(mm/24)}deg)`;
+	mn.style.transform = `rotateZ(${mm}deg)`;
+	sc.style.transform = `rotateZ(${ss}deg)`;
+})
