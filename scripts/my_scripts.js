@@ -6,10 +6,19 @@ setInterval(() => {
 	let mm = day.getMinutes() * deg;
 	let ss = day.getSeconds() * deg;
 
+	let y = day.getFullYear();
+	let m = day.getMonth();
+	let d = day.getDate();
+
+	document.getElementById('dateDisplay').innerHTML = d + '-' + m + '-' + y;
+
+
 	hr.style.transform = `rotateZ(${hh+(mm/24)}deg)`;
 	mn.style.transform = `rotateZ(${mm}deg)`;
 	sc.style.transform = `rotateZ(${ss}deg)`;
 })
+
+
 
 function updateBackground() { 
  	var dayz = new Date();
@@ -23,10 +32,9 @@ function updateBackground() {
 	} else {
     document.body.style.backgroundColor='#001A26';
 	}	
-} 
+}
 
-
-
+//update in seconden:
 // function updateBackground() { 
 //  	var dayz = new Date();
 //   	var hh = dayz.getHours();
