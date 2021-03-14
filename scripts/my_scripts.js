@@ -26,11 +26,14 @@ function updateBackground() {
   	var sss = dayz.getSeconds();
 
 	if (hh >= 6 && hh <= 10) {
-    document.body.style.backgroundColor='#EF810E';
+    document.body.style.backgroundColor='#EFCA80';
+    document.body.style.backgroundImage = "url('styles/spacexbgo.png')";
 	} else if (hh >= 11 && hh <= 20) {
-    document.body.style.backgroundColor='#053752';
+    document.body.style.backgroundColor='#E4533A';
+    document.body.style.backgroundImage = "url('styles/spacexbgm.png')";
 	} else {
     document.body.style.backgroundColor='#001A26';
+    document.body.style.backgroundImage = "url('styles/spacexbg.png')";
 	}	
 }
 
